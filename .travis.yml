@@ -12,4 +12,4 @@ before_install:
 
 script:
   - docker login -u "$docker_user" -p "$docker_pass"
-  - docker push joshymjose/debian:arm-gcc
+  - docker push joshymjose/docker-container-debian-arm-gcc:debian-arm-gcc
