@@ -1,10 +1,11 @@
 FROM debian
 
 SHELL ["/bin/bash", "-c"]
-COPY install.sh $HOME
-RUN cd $HOME \
+RUN mkdir /usr/install_script
+COPY install.sh /usr/install_script
+RUN cd /usr/install_script \
    &&  ls
-RUN $HOME/install.sh
+RUN /usr/install_script/install.sh
 ENV PATH "$PATH:$HOME/arm-gcc-toolchain/bin"
 
 ENTRYPOINT ["echo"]
