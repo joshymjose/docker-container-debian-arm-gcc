@@ -6,7 +6,7 @@ services:
 - docker
 
 before_install:
-  - docker build -t joshymjose/debian:arm-gcc .
+  - docker build -t joshymjose/docker-container-debian-arm-gcc:debian-arm-gcc .
   - docker run -d --name test joshymjose/debian:arm-gcc
   - docker ps -a
 
