@@ -1,7 +1,8 @@
 FROM debian
 
 SHELL ["/bin/bash", "-c"]
-RUN /install.sh
+COPY install.sh ~
+RUN ~/install.sh
 ENV PATH "$PATH:$HOME/arm-gcc-toolchain/bin"
 
 ENTRYPOINT ["echo"]
